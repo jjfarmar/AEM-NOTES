@@ -1,0 +1,357 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lipsum,lineno}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage[dvipsnames]{xcolor}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,fill=blue!20,draw,inner sep=2pt] (char) {#1};}}
+
+\usepackage{enumitem}
+
+\usepackage[ 
+  paperwidth = 168.3mm,
+  paperheight = 260.4mm,
+  top = 6mm,
+  bottom = 7mm,
+  outer = 6mm,
+  inner = 20mm
+]{geometry}
+
+\setlength\parindent{0pt}
+
+\newcommand{\CommentFontSize}{21}
+\newcommand{\CommentSkipMult}{25}
+
+\newcommand{\UserFontSize}{16}
+\newcommand{\UserSkipMult}{0}
+
+\newcommand{\DateFontSize}{15}
+\newcommand{\DateSkipMult}{0}
+
+\newenvironment{commentTextFont}
+ {\fontfamily{mdugm}%
+  \fontsize{\CommentFontSize}{\CommentSkipMult}%
+  \selectfont}
+ {\par}
+
+ \newenvironment{userFont}
+ {\fontfamily{mdugm}%
+  \fontsize{\UserFontSize}{\UserSkipMult}%
+  \selectfont}
+ {\par}
+
+ \newenvironment{dateFont}
+ {\fontfamily{mdugm}%
+  \fontsize{\DateFontSize}{\DateSkipMult}%
+  \selectfont}
+ {\par}
+
+ \newcommand{\uComment}[3]{%
+  \filbreak
+  \begin{commentTextFont}#1\end{commentTextFont}%
+  \vspace*{0.5cm}
+  \begin{userFont}\textit{#2}\hspace*{\fill}%
+  \begin{dateFont}#3\end{dateFont}\end{userFont}%
+  \vspace*{0.8cm}
+}
+
+\newcommand{\nobarfrac}{\genfrac{}{}{0pt}{}}
+
+\newcommand{\numberset}[1]{\mathbb{#1}}
+\newcommand{\nat}{\numberset{N}}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\author{}
+
+\begin{document}
+
+\raggedright
+
+
+
+\title{Advanced Engineering Mathematics}
+
+\date{\vspace{-5ex}}
+
+\maketitle
+
+\section{SERIES}
+\indent A \underline{sequence} is a list of terms that have been arranged in a certain order.\medskip
+
+\noindent A \underline{series} is the sum of all the terms in a sequence. However, there has to be a definite relationship
+between all the terms.
+\subsection{ARITHMETIC SEQUENCE}
+
+
+A \underline{sequence} is \underline{arithmetic} if \({d} \in \mathbb{R} \ni \forall {k} \in \mathbb{Z}^{+} \), 
+\[a_{k+1} = a_{k+d}\]
+where \(d = a_{k+1} - a_k\) is the common difference
+
+\noindent and \(d = a_k + (n-k)d\) is the nth term of the sequence\medskip
+
+
+\noindent \underline{NOTATION}:
+ $ \{ a_n \} $ or $ \{ a_n \}_{n=1}^{\infty}$ 
+
+\subsubsection{ARITHMETIC SERIES}
+Partial Sum:
+
+\[ S_n = \frac{n}{2}(2a_1 + (n-1)d)\]
+Or
+\[ S_n = \frac{n}{2}(a_1 + a_n)\]
+
+\subsection{GEOMETRIC SEQUENCE}
+
+A \underline{sequence} is \underline{geometric} if \(a_1 \ne 0 \) and if \( {r} \in \mathbb{R} \ne 0 \ni \forall k \in \mathbb{Z}\),
+
+\[a_{k+1} = a_{k} r\]
+
+\noindent where \(r = \frac{a_{k+1}}{a_k}\) is the common ratio\\
+and \(a_n = a_k r^{n-k}\) is the nth term
+
+\subsubsection{GEOMETRIC SERIES}
+
+ \[ \sum_{n=1}^{\infty} a^{n-1} = {a + ar + ar^{2} + ...} \]
+
+\noindent is convergent if \(\abs{r} < 1 \)\\
+and the sum is 
+
+\[ \sum_{n=1}^{\infty} ar^{n-1} = \frac{a}{1-r},  \abs{r} < 1\]
+
+\subsection{CONVERGENCE}
+
+A series \underline{converges} when the infinite sequence of the partial sums have a finite limit.\medskip
+
+\noindent Any series in which individual terms approach zero \underline{converges.}\medskip
+
+If $\sum_{n=1}^{\infty}a_n$ is \underline{convergent} then \( \lim_{n \to \infty} a_n = 0 \)
+
+\subsection{DIVERGENCE}
+
+A series \underline{diverges} when the infinite sequence of the partial sums does not have a finite limit.\medskip
+
+\noindent Any series in which individual terms does not approach zero \underline{diverges}.
+
+Given a series \( \ \sum_{n=1}^{\infty} a_n = a_1 + a_2 + a_3 + ...\),
+\[S_n = \sum_{i = 1}^{n} a_i = a_1 + a_2 + ... + a_n\]
+
+\noindent If $\{S_n\}$ is \underline{convergent} and \(\lim_{n \to \infty} S_n = s\) exists as a real number, then \( \sum a_n\) is called
+\underline{convergent} and 
+
+\[a_1 + a_2 + .... + a_n + ... = s\]
+
+Or
+
+\[\sum_{n=1}^{\infty} a_n = s\]
+
+\noindent where s is the sum. Otherwise, the series is \underline{divergent}.
+
+\subsection{TEST FOR DIVERGENCE}
+
+If \( lim_{n \to \infty} a_n\) does not exist or
+if \( lim_{n \to \infty} a_n \neq 0\), then the series \( \sum_{n=1}^{\infty} a_n\) is \underline{divergent}.
+
+\subsection{PROPERTIES OF CONVERGENT SERIES}
+
+If \( \sum a_n \) and \( \sum b_n \) are \underline{convergent} series, then so are:
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item \( \sum_{n=1}^{\infty} ca_n = c \sum_{n=1}^{\infty} a_n\)
+  \item \( \sum_{n=1}^{\infty} ( a_n + b_n ) = \sum_{n=1}^{\infty} a_n + \sum_{n=1}^{\infty} b_n\)
+  \item \( \sum_{n=1}^{\infty} ( a_n - b_n ) = \sum_{n=1}^{\infty} a_n - \sum_{n=1}^{\infty} b_n\)
+\end{enumerate}
+
+\subsection{INTEGRAL TEST}
+
+Suppose \(f\) is a \textit{continuous}, \textit{positive}, \textit{decreasing} function on \( [1,\infty)\).\\
+\noindent Then \( \sum_{n=1}^{\infty} a_n \) is \underline{convergent} if and only if the improper integral \( \int_{1}^{\infty} f(x) dx \) is
+convergent.
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item If \( \int_{1}^{\infty} f(x) dx \) is \underline{convergent}, then \( \sum_{n=1}^{\infty} a_n\) is \underline{convergent}.
+  \item If \( \int_{1}^{\infty} f(x) dx \) is \underline{divergent}, then \( \sum_{n=1}^{\infty} a_n\) is \underline{divergent}.
+\end{enumerate}
+
+\subsection{\(p\)-SERIES}
+
+The \(p\)-series \( \sum_{n=1}^{\infty} \frac{1}{n^p} \) is \underline{convergent} if \( p > 1\) and \underline{divergent} if \( p \leq 1\).
+
+\subsection{COMPARISON TEST}
+
+Suppose \( \sum a_n \) and \( \sum b_n \) are series with \textit{positive} terms.
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item If \( \sum b_n \) is \underline{convergent} and \( a_n \leq b_n \forall n \), then \( \sum a_n \) is \underline{convergent}. 
+  \item If \( \sum b_n \) is \underline{divergent} and \( a_n \geq b_n \forall n \), then \( \sum a_n \) is \underline{divergent}.
+\end{enumerate}
+
+\subsection{LIMIT COMPARISON TEST}
+
+Suppose \( \sum a_n\) and \( \sum b_n \) are series with \textit{positive} terms.
+
+If \( \lim_{n \to \infty} \frac{a_n}{b_n} = c\)
+
+where \(c\) is a finite number and \( c > 0 \), then both series either \underline{converge} or \underline{diverge}.\bigskip
+
+\subsection{ALTERNATING SERIES TEST}
+
+If the alternating series
+
+\[ \sum_{n=1}^{\infty} (-1)^{n-1} b_n = b_1 - b_2 + b_3 - b_4 + b_5 - b_6 + ..., b_n > 0 \]
+
+Satisfies 
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item \( b_{n+1} \leq b_n \forall n \)
+  \item \( \lim_{n \to \infty} b_n = 0\)
+\end{enumerate}
+
+then the series is \underline{convergent}.
+
+\subsection{ABSOLUTE CONVERGENCE}
+
+If \( \sum_{n=0}^{\infty} \abs{a_n}\) \underline{converges}, then \( \sum_{n=0}^{\infty} a_n\) \underline{converges}.
+
+\subsection{CONDITIONAL CONVERGENCE}
+
+If \( \sum a_n \) converges, but \( \abs{a_n} \) does not, \( \sum a_n \) \underline{converges conditionally}.
+
+\subsection{RATIO TEST}
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item If \( \lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} = L < 1\), then \( \sum_{n=1}^{\infty} a_n \) is \underline{absolutely convergent}.
+  \item If \( \lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} = L > 1\) or \( \lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} = \infty \), then \( \sum_{n=1}^{\infty} a_n \) is \underline{divergent}.
+  \item If \( \lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} = 1\), then the test is \underline{inconclusive}*.
+\end{enumerate}
+
+*use another test.
+
+\subsection{ROOT TEST}
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item If \( \lim_{n \to \infty}\sqrt[n]{\abs{a_n}} = L < 1\), then \( \sum_{n=1}^{\infty} a_n \) is \underline{absolutely convergent}.
+  \item If \( \lim_{n \to \infty}\sqrt[n]{\abs{a_n}} = L > 1\) or \( \lim_{n \to \infty}\sqrt[n]{\abs{a_n}} = \infty\), then \( \sum_{n=1}^{\infty} a_n \) is \underline{divergent}.
+  \item If \( \lim_{n \to \infty}\sqrt[n]{\abs{a_n}} = 1\), then the test is \underline{inconclusive}*.
+\end{enumerate}
+
+*use another test.
+
+\subsection{POWER SERIES}
+
+A power series is a series of the form
+
+\[ \sum_{n=0}^{\infty} c_n x^n = c_0 + c_1 x + c_2 x^2 + c_3 x^3 + ...\]
+
+where \(x\) is a variable and the \( c_n \)'s are the coefficients of the series.
+
+A power series may \underline{converge} for some values of \(x\) and \underline{diverge} for other values of \(x\).
+The sum of the series is a function
+
+\[ f(x) = c_0 + c_1 x + c_2 x^2 + ... + c_n x^2 + ...\]
+
+whose domain is the set of all \(x\) for which the series \underline{converges}.\bigskip
+
+In general, a series of the form
+
+\[ \sum_{n=0}^{\infty} c_n (x-a)^n = c_0 + c_1 (x-a) + c_2 (x-a)^2 + ...\]
+
+is called a power series in \((x-a)\) or a power series centered at \(a\) or a power series
+about \(a\).
+
+\subsubsection{THEOREM}
+
+For a given power series \( \sum_{n=0}^{\infty} c_n (x-a)^n \) there are only three possibilities:
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item The series \underline{converges} only when \(x=a\)
+  \item The series \underline{converges} \( \forall x \)
+  \item There is a positive number \(R\) such that the series \underline{converges} if \( \abs{x-a} < R \) and \underline{diverges} if \( \abs{x-a} > R \).
+\end{enumerate}
+
+In general, the \underline{Ratio Test} (or sometimes the Root Test) should be used to determine the radius of convergence \( R \). The \underline{Root} and \underline{Ratio} Tests \textcolor{red}{\textit{always}} fail if \(x\) is an endpoint
+of the interval of convergence, so the endpoints must be checked with some other test.
+
+We can represent certain types of functions as sums of power series by manipulating geometric series or by differentiating such a series.
+Expressing a known function as a sum of infinitely many terms is useful for integrating functions that don't have elementary
+antiderivatives, for solving different equations, and approximating functions by polynomials.
+
+Recall that:
+
+\[ \frac{1}{1-x} = 1 + x + x^2 + x^3 + \dots = \sum_{n=0}^{\inf} x^n \qquad \abs{x} < 1 \]
+
+
+
+\subsubsection{DIFFERENTIATION AND INTEGRATION OF POWER SERIES}
+
+If the power series \( C_n(x-a)^n \) has radius of convergence \( R > 0 \) then the function \( f \) defined by
+
+\[ f(x) = c_0 + c_1 (x-a) + c_2 (x-a)^2 + ... = \sum_{n=0}^{\infty} c_n (x-a)^n \]
+
+is differentiable (and therefore continuous) on the interval \((a-R, a+R)\) and
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item \( \frac{d}{dx} [\sum_{n=0}^{\infty} c_n (x-a)^n] = \sum_{n=0}^{\infty} \frac{d}{dx} [c_n (x-a)^n]\)
+  \item \( \int [\sum_{n=0}^{\infty} c_n (x-a)^n] dx = \sum_{n=0}^{\infty} \int c_n (x-a)^n dx\)
+\end{enumerate}
+
+The radii of convergence of the power series in i and ii are both \( R \)
+
+\subsection{TAYLOR SERIES}
+
+If \( f \) has a power series representation (expansion) at \( a \), that is, if
+
+\[ f(x) = \sum_{n=0}^{\infty} c_n (x-a)^n, \abs{x-a} < R\]
+
+then its coefficients are given by the formula
+
+\[ c_n = \frac{f^{(n)} (a)}{n!}\]
+
+Substituting \( c_n \) back to the series gives
+
+\[ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)} (a)}{n!} (x-a)^n\]
+
+The above series is called the Taylor series of the function \( f \) at \( a \).
+
+\subsection{MACLAURIN SERIES}
+
+The special case \( a = 0\) of the Taylor series, such series becomes
+
+\[ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n = f(0) + \frac{f'(0)}{1!} x + \frac{f''(0)}{2!} x^2 + \dots\]
+
+This case arises frequently enough and is called the Maclaurin series.
+
+\subsubsection{BINOMIAL SERIES}
+
+If \(k \in \mathbb{R} \) and \( \abs{x} < 1 \), then
+
+\[(1+x)^k = \sum_{n=0}^{\infty} (\nobarfrac{k}{n}) x^n = 1 + kx + \frac{k(k-1)}{2!} x^2 + \frac{k(k-1)(k-2)}{3!} x^3 + \dots \]
+
+\subsubsection{MACLAURIN SERIES AND THEIR RADII OF CONVERGENCE}
+
+\[ \frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \dots \qquad R = 1\] 
+\[ e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots \qquad R = \infty\]
+\[ sinx = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots \qquad R = \infty \]
+\[ cosx = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots \qquad R = \infty \]
+\[ tan^{-1}x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n+1} = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \dots \qquad R = 1 \]
+\[ ln(1 + x) = \sum_{n=0}^{\infty} (-1)^{n-1} \frac{x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots \qquad R = 1 \]
+\[ (1 + x)^k = \sum_{n=0}^{\infty} (\nobarfrac{k}{n}) x^n = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \dots \qquad R = 1 \]
+
+
+
+
+\end{document}
