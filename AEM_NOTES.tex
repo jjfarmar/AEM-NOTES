@@ -396,10 +396,95 @@ both summations now \textit{start at the same index} and have \textit{the same e
 \[2c_2 + \sum_{k=1}^{\infty}(k+2)(k+1)c_{k+2} x^{k} - \sum_{k=1}^{\infty} c_{k-1} x^{k}\]
 \[= 2c_2 + \sum_{k=1}^{\infty}[(k+2)(k+1)c_{k+2}  - c_{k-1} ] x^{k}\]
 
+\subsection{SOLUTIONS ABOUT ORDINARY POINTS}
 
-\subsection{POWER SERIES SOLUTIONS}
+Suppose the linear second order differential equation:
+
+\[a_2(x)y'' + a_1(x)y' + a_0(x)y = 0\]\vspace{0.5cm}
+
+divide by the leading coefficient \(a_2(x)\):
+\[y'' + \frac{a_1(x)}{a_2(x)}y' + \frac{a_0(x)}{a_2(x)} y = 0\]
+
+Let \(P(x) = \frac{a_1(x)}{a_2(x)}\) and \(Q(x) = \frac{a_0(x)}{a_2(x)}\); thus the standard form:
+
+\[y'' + P(x)y' + Q(x)y = 0\]
+
+\subsubsection{ORDINARY POINTS}
+
+A point \(x_0\) is said to be the \textbf{ordinary point} of a differential equation if both \(P(x)\) and \(Q(x)\) are analytic at \(x_0\).
+A point that is not an ordinary point is said to be a \textbf{singular point} of the equation. \vspace{0.5cm}
+
+\textbf{Ordinary points} are extracted from the values of \(x\) in the expressions of the \underline{numerators}, while \textbf{singular points} can be extracted from
+the expressions in the \underline{denominators}.
 
 
+\subsubsection{POWER SERIES SOLUTIONS}
 
+If \(x = x_0\) is an ordinary point of a differential equation, we can \textit{always find two linearly independent solutions} in the form of a power series centered at \(x_0\);\vspace{0.5cm}
+
+that is,
+
+\[y=\sum_{n=0}^{\infty} c_n (x-x_0)^n\]
+
+A series solution converges at least on some interval defined by \( \abs{x-x_0} < R\), where \(R\) is the distance from \(x_0\) to the closest singular point.\vspace{0.5cm}
+
+\textbf{Power series solutions} can only be used if a differential equation has an \textbf{ordinary point}.
+
+
+\subsection{SOLUTIONS ABOUT SINGULAR POINTS}
+
+A singular point is a \textbf{regular singular point} when the expression in the denominator of \(P(x)\) is \textit{at most} to the first degree and the expression in the denominator of 
+\(Q(x)\) is \textit{at most} to the second degree. Otherwise, it is an \textbf{irregular singular point}.
+
+\subsubsection{FROBENIUS METHOD}
+
+If \(x = x_0\) is a regular point, then there exists at least one non-zero solution in the form
+
+\[y = (x-x_0)^r \sum_{n=0}^{\infty} c_n (x-x_0)^n = \sum_{n=0}^{\infty} c_n(x-x_0)^{n+r}\]
+
+where \(r\) is a constant to be determined. The series will converge at least on some given interval defined by \(0 < x - x_0 < R\).\\
+Assume that \(c_0 \neq 0\).
+
+\subsubsection{GENERAL INDICIAL EQUATION}
+
+To determine the values of \(r_1\) and \(r_2\), we use the \textbf{general indicial equation} given by:
+
+\[r(r-1) + a_0 r + b_0 = 0\] 
+\[r^2 - r + a_0 r + b_0 = 0\]
+rearranging,
+\[r^2 + (a_0 - 1) r + b_0 = 0\]
+
+which is in the form of a quadratic equation in standard form \(ar^2 + br + c = 0\), where \(a = 1\), \(b = a_0 - 1\) and \(c = b_0\).\vspace{0.5cm}
+
+And thus the quadratic formula can be used to solve for \(r_1\) and \(r_2\):
+
+\[r_{1,2} = \frac{-(a_0 - 1) \pm \sqrt{(a_0-1)^2 - 4(1)(b_0)}}{2(1)}\]
+
+\subsubsection{CASE I}
+
+If \(r_1\) and \(r_2\) are distinct (their difference is between 0 and 1), there exist two linearly independent solutions of the form
+
+\[y_1(x) = \sum_{n=0}^{\infty} c_nx^{n+r_1}\]
+\[y_2(x) = \sum_{n=0}^{\infty} b_nx^{n+r_2}\]
+
+\subsubsection{CASE II}
+
+If \(r_1 - r_2 = N\), where \(N\) is a positive integer, then there exist two linearly independent solutions of the form
+
+\[y_1(x) = \sum_{n=0}^{\infty} c_nx^{n+r_1} \qquad ,c_0 \neq 0\]
+\[y_2(x) = Cy_1(x)ln(x) + \sum_{n=0}^{\infty} b_nx^{n+r_2} \qquad ,b_0 \neq 0\]
+
+Where C is a constant that could be zero.
+
+\subsubsection{CASE III}
+
+If r1 = r2, then there exist two linearly independent solutions of the form
+
+\[y_1(x) = \sum_{n=0}^{\infty} c_nx^n+r_1 \qquad ,c_0 \neq 0\]
+\[y_2(x) = y_1(x) ln(x) + \sum_{n=0}^{\infty} b_nx^{n+r_2}\]
+
+if \(r_1 - r_2 = 0\), the method fails to give a series solution. However, if \(y_1(x)\) is a known solution, we can obtain the second solution using:
+
+\[y_2(x) = y_1(x) \int \frac{e^{-\int P(x)dx}}{y_1^2(x)} dx\]
 
 \end{document}
