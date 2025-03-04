@@ -8,6 +8,13 @@
 \usepackage{tikz}
 \usepackage[dvipsnames]{xcolor}
 
+
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+  #1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
             \node[shape=circle,fill=blue!20,draw,inner sep=2pt] (char) {#1};}}
 
@@ -32,6 +39,8 @@
 
 \newcommand{\DateFontSize}{15}
 \newcommand{\DateSkipMult}{0}
+
+
 
 \newenvironment{commentTextFont}
  {\fontfamily{mdugm}%
@@ -66,7 +75,7 @@
 \newcommand{\nat}{\numberset{N}}
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
-\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
 
 \makeatletter
 \let\oldabs\abs
@@ -486,5 +495,24 @@ If r1 = r2, then there exist two linearly independent solutions of the form
 if \(r_1 - r_2 = 0\), the method fails to give a series solution. However, if \(y_1(x)\) is a known solution, we can obtain the second solution using:
 
 \[y_2(x) = y_1(x) \int \frac{e^{-\int P(x)dx}}{y_1^2(x)} dx\]
+
+\section{Vector Analysis}
+
+\subsection{Vectors in \(\mathbb{R}^{n}\)}
+\subsubsection{Vectors in \(\mathbb{R}^{2}\)}
+
+\textbf{Scalars vs Vectors:}\vspace{0.5cm}
+
+\textbf{Scalar:} A quantity with a \textit{magnitude} (in simplest terms, just a number)\\
+\textbf{Vector:} A quantity with both a \textit{magnitude} and \textit{direction} (weight, force)\vspace{0.5cm}
+
+\subsubsection{Vector Notation}
+
+\(\overrightarrow{\mathbf{AB}}\): a vector with start point at \(\mathbf{A}\) and terminal point at \(\mathbf{B}\)\\
+\(\norm{\overrightarrow{\mathbf{AB}}}\): magnitude of a vector
+
+
+
+
 
 \end{document}
