@@ -6,7 +6,15 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{multirow}
+\graphicspath{./images/}
 \usepackage[dvipsnames]{xcolor}
+
+\DeclareRobustCommand{\qdist}[1]{\ifmmode\langle#1\rangle\else\textlangle#1\textrangle\fi}
 
 
 \DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
@@ -88,6 +96,8 @@
 \author{}
 
 \begin{document}
+
+
 
 \raggedright
 
@@ -506,13 +516,423 @@ if \(r_1 - r_2 = 0\), the method fails to give a series solution. However, if \(
 \textbf{Scalar:} A quantity with a \textit{magnitude} (in simplest terms, just a number)\\
 \textbf{Vector:} A quantity with both a \textit{magnitude} and \textit{direction} (weight, force)\vspace{0.5cm}
 
-\subsubsection{Vector Notation}
+\subsubsection{Vector Notation and Terminology}
 
-\(\overrightarrow{\mathbf{AB}}\): a vector with start point at \(\mathbf{A}\) and terminal point at \(\mathbf{B}\)\\
-\(\norm{\overrightarrow{\mathbf{AB}}}\): magnitude of a vector
+\(\overrightarrow{AB}\): a vector with start point at \(\mathbf{A}\) and terminal point at \(\mathbf{B}\)\\
+\(\norm{\overrightarrow{\mathbf{AB}}}\): magnitude of a vector\\
+\(\overrightarrow{AB} = \overrightarrow{CD}\): two vectors that have the same magnitude and direction\\
+\(-\overrightarrow{AB}\): negative of a vector\\
+\(k\overrightarrow{AB}\): scalar multiple of a vector\\
+\(0\overrightarrow{AB} = 0\): the zero vector\vspace{0.5cm}
+
+Vectors are \textit{free}— they can be moved to any new position if their magnitudes and directions are not changed.\vspace{0.5cm}
+
+if \(k > 0\), \(k\overrightarrow{AB}\) has the same direction as \(\overrightarrow{AB}\)\\
+if \(k < 0\), \(k\overrightarrow{AB}\) has the same direction, but opposite of \(\overrightarrow{AB}\)\\
+Two vectors are \textit{parallel} if and only if they are nonzero scalar multiples of each other.\vspace{0.5cm}
+
+\subsubsection{Vector Addition and Subtraction}
+
+\begin{figure}[h]
+  \includegraphics[width=5cm]{images/figure1.PNG}
+  \centering
+\end{figure}
+
+If \(\overrightarrow{AB}\) and \(\overrightarrow{AC}\) are on the sides of a parallelogram, \(\overrightarrow{AD}\) is the sum of \(\overrightarrow{AB}\) and \(\overrightarrow{AC}\): 
+
+\[\overrightarrow{AD} = \overrightarrow{AB} + \overrightarrow{AC}\]
+
+\begin{figure}[h]
+  \includegraphics[width=5cm]{images/figure2.PNG}
+  \centering
+\end{figure}
+
+The difference between two vectors:
+
+\[\overrightarrow{AB} - \overrightarrow{AC} = \overrightarrow{AB} + (-\overrightarrow{AC})\]
+
+\begin{figure}[h]
+  \includegraphics[width=5cm]{images/figure3.PNG}
+  \centering
+\end{figure}
+
+The same vector difference can be interpretted as the third side of a triangle with sides \(\overrightarrow{AB}\) and \(\overrightarrow{AC}\):
+
+\[\overrightarrow{CB} = \overrightarrow{AB} - \overrightarrow{AC}\]
+
+\begin{figure}[h]
+  \includegraphics[width=5cm]{images/figure4.PNG}
+  \centering
+\end{figure}
+
+\subsubsection{Vectors in a Coordinate Plane}
+
+Suppose vectors are on a 2D plane.\\
+
+A position vector of the point \(P\) is a vector with an initial point at origin \(O\) and a terminal point \(P(x_1 , y_1)\):
+
+\[\overrightarrow{OP} = \qdist{x_1,y_1}\]
+
+\begin{figure}[h]
+  \includegraphics[width=5cm]{images/figure5.PNG}
+  \centering
+\end{figure}
+
+\textbf{EXAMPLE 1}\\
+
+The displacement from an initial point \(P_1(x,y)\) to a terminal point \(P_2(x + 4, y + 3)\)
+is 4 units to the right and 3 units up.
+
+\begin{figure}[h]
+  \includegraphics[width=5cm]{images/figure6.PNG}
+  \centering
+\end{figure}
+
+The position vector \(a = \qdist{4,3}\) emanating from the origin is the equivalent to the displacement vector \(\overrightarrow{P_1 P_2}\) from \(P_1(x,y)\) to \(P_2(x+4,y+3)\).
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure7.PNG}
+  \centering
+\end{figure}\vspace{0.5cm}
+
+In general, a vector \(a\) in \(\mathbb{R}^{2}\) is any ordered pair of real numbers
+
+\[a = \qdist{a_1, a_2}\]
+
+The numbers \(a_1\) and \(a_2\) are components of vector \(a\).\vspace{0.5cm}
+
+\textbf{Addition, Scalar Multiplication, Equality}\\
+Let \(a = \qdist{a_1, a_2}\) and \(b = \qdist{b_1, b_2}\) be vectors in \(\mathbb{R}^{2}\).\\
+
+\begin{enumerate}[label=\protect\circled{\roman*}]
+  \item Addition: \(a + b = \qdist{a_1 + b_1, a_2 + b_2}\)
+  \item Scalar Multiplication: \(ka = \qdist{ka_1, kb_1}\)
+  \item Equality: \(a = b\) if and only if \(a_1 = b_1, a_2 = b_2\) 
+\end{enumerate}
+
+\textbf{Subtraction}\\
+
+The \textit{negative} of a vector \textit{b} is defined by
+
+\[-b = (-1)b = \qdist{-b_1,-b_2}\]
+
+\textit{Subtraction} can then be defined by
+
+\[a-b=a+(-b) = \qdist{a_1-b_1,a_2-b_2}\]
+
+The sum of two vectors \(\overrightarrow{OP_1}\) and \(\overrightarrow{OP_2}\)
+
+\begin{figure}[H]
+  \includegraphics[width=6cm]{images/figure8.PNG}
+  \centering
+\end{figure}
+
+The vector \(\overrightarrow{P_1 P_2}\) with initial point $P_1$ and terminal point $P_2$ is the difference of position vectors 
+
+\[\overrightarrow{P_1 P_2} = \overrightarrow{OP_2} - \overrightarrow{OP_1} = \qdist{x_2 - x_1 , y_2 - Y_1}\]
+
+\begin{figure}[H]
+  \includegraphics[width=8cm]{images/figure9.PNG}
+  \centering
+\end{figure}
+
+The vector \(\overrightarrow{P_1 P_2}\) can be drawn either starting from the terminal point of \(OP_1\) to the terminal point of \(OP_2\), or as the position vector $\overrightarrow{OP}$ whose terminal point has coordinates $(x_2 - x_1, y_2 - y_1)$\vspace{0.5cm}
+
+$\overrightarrow{OP}$ and $\overrightarrow{P_1 P_2}$ are considered equal, since the have the same magnitude and direction.\vspace{0.5cm}
+
+\textbf{EXAMPLE 2}\\
+
+if $a = \qdist{1,4}$ and $b = \qdist{-6,3}$, find:\\
+
+\begin{itemize}
+  \item $\mathbf{a+b}$\\
+    $a + b =  \qdist{1 + (-6), 4 + 3} = \qdist{-5 , 7} $ 
+  \item $\mathbf{a-b}$\\
+    $a - b = \qdist{1 - (-6), 4 - 3} = \qdist{7 , 1}$
+  \item $\mathbf{2a + 3b}$\\
+    $2a + 3b = \qdist{2(1) + 3(-6),2(4) + 3(3)} = \qdist{2 + (-18), 8 + 9} = \qdist{-16,17} $
+\end{itemize}
+
+\textbf{Properties of Vectors}
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textit{Commutative:} \(a + b = b+ a\)
+  \item \textit{Associative:} \(a + (b + c) = (a + b) + c\)
+  \item \textit{Additive Identity:} \(a + 0 = a\)
+  \item \textit{Additive Inverse:} \(a + (-a) = 0\)
+  \item \(k(a + b) = ka + kb\), $k$ a scalar
+  \item \((k_1 + k_2)a = k_1 a + k_2 a\), $k_1$ and $k_2$ scalars
+  \item \(k_1(k_2 a) = (k_1 k_2)a\), $k_1$ and $k_2$ scalars
+  \item $1a = a$
+  \item \textit{Zero Vector:} $0a = 0$ 
+\end{enumerate}
+
+the zero vector 0 in properties $(iii)$, $(iv)$, and $(ix)$ is defined as
+
+\[0 = \qdist{0,0}\]
+
+\textbf{Magnitude}\vspace{0.5cm}
+
+The \textbf{magnitude}, \textbf{length} or \textbf{norm} of a vector $a$ is denoted by $\norm{a}$ \\
+By pythagorean theorem,
+
+
+\[\norm{a} = \sqrt{a^2 _1 + a ^2_2}\]
+
+\(\norm{a} \geq 0 \) for any vector \(a\), and \(\norm{a} = 0\) if and only if \(a = 0\). For example, if \(a = \qdist{6,-2}\),
+
+\[\norm{a} = \sqrt{6^2 + -2^2} = \sqrt{36 + 4} = \sqrt{40} = 2\sqrt{10}\]
+
+
+\textbf{Unit Vectors}\vspace{0.5cm}
+
+A vector of magnitude 1 is called a \textit{unit vector}.
+
+\[\norm{u} = \norm{\frac{1}{\norm{a}} a} = \frac{1}{\norm{a}} \norm{a} = 1\]
+
+write \(u = \frac{1}{\norm{a}} a\) as 
+
+\[u = \frac{a}{\norm{a}}\]
+
+\textbf{EXAMPLE 3}\vspace{0.5cm}
+
+Given $\mathbf{a} = \qdist{2, -1}$, form a unit vector in the same direction as $\mathbf{a}$. In the opposited direction of $\mathbf{a}$.\vspace{0.5cm}
+
+\textbf{SOLUTION}\vspace{0.5cm}
+
+\[\norm{\mathbf{a}} = \sqrt{2^2 + (-1)^2} = \sqrt{5}\]
+
+\[\mathbf{u} = \frac{1}{\sqrt{5}} \mathbf{a} = \frac{1}{\sqrt{5}} \qdist{2,-1} = \qdist{\frac{2}{\sqrt{5}},-\frac{1}{\sqrt{5}}}\]
+
+In the opposite direction of $\mathbf{a}$:
+
+\[\mathbf{-u} = \qdist{-\frac{2}{\sqrt{5}},\frac{1}{\sqrt{5}}}\]
+
+If $\mathbf{a}$ and $\mathbf{b}$ are vectors and $c_1$ and $c_2$ are scalars, then $c_1 \mathbf{a} + c_2 \mathbf{b}$ is called a linear combination of $\mathbf{a}$ and $\mathbf{b}$.\vspace{0.5cm}
+
+\textbf{The i, j Vectors}\vspace{0.5cm}
+
+Any vector $\mathbf{a} = \qdist{a_1 , a_2}$ can be written as a sum:\\
+
+\[\qdist{a_1,a_2} = \qdist{a_1,0} + \qdist{0,a_2} = a_1\qdist{1,0} + a_2\qdist{0,1}\]
+
+The unit vectors $\qdist{a_1,a_2}$ and $\qdist{0,1}$ are usually given the special symbols \textbf{i} and \textbf{j}.
+
+\[i = \qdist{1,0} \text{ and } j = \qdist{0,1} \]
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure10.PNG}
+  \centering
+\end{figure}\vspace{2.5cm}
+
+thus $\mathbf{a} = a_1\mathbf{i} + a_2\mathbf{j}$
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure11.PNG}
+  \centering
+\end{figure}
+
+The unit vectors \textbf{i} and \textbf{j} are referred to as the \textbf{standard basis} for the system of 2D vectors. the scalar $a_1$ is called the \textit{horizontal component} and $a_2$ is called the \textit{vertical components} of $\textbf{a}$.\vspace{0.5cm}
+
+\textbf{EXAMPLE 4: Vector Operations Using i and j}\\
+
+\begin{enumerate}[label = (\alph*)]
+  \item $\qdist{4,7} = 4\mathbf{i} + 7\mathbf{j}$
+  \item $(2\mathbf{i} - 5\mathbf{j}) + (8\mathbf{i} + 13\mathbf{j}) = 10\mathbf{i} + 8\mathbf{j}$
+  \item $\norm{\mathbf{i} + \mathbf{j}} = \sqrt{2}$
+  \item $10(3\mathbf{i} - \mathbf{j}) = 30\mathbf{i} - 10\mathbf{j}$
+  \item $\mathbf{a} = 6\mathbf{i} + 4\mathbf{j}$ and $\mathbf{b} = 9\mathbf{i} + 6\mathbf{j} \text{ are parallel, since } \mathbf{b} \text{ is a scalar multiple of \textbf{a}. We see that } \mathbf{b} = \frac{3}{2} \textbf{a}$.
+\end{enumerate}
+
+\textbf{EXAMPLE 5: Graphs of Vector Sum/Vector Difference}\\
+
+Let $\mathbf{a} = 4\mathbf{i} + 2\mathbf{j} \text{ and } \mathbf{b} = -2\mathbf{i} + 5\mathbf{j}$. Graph \textbf{a} + \textbf{b} and \textbf{a} - \textbf{b}.\vspace{0.5cm}
+
+\textbf{SOLUTION}\\
+
+\[\textbf{a} + \textbf{b} = 2\textbf{i} + 7\textbf{j}\]
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure12.PNG}
+  \centering
+\end{figure}
+
+\vspace{10cm}
+
+\[\textbf{a} - \textbf{b} = 6\textbf{i} - 3\textbf{j}\]
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure13.PNG}
+  \centering
+\end{figure}
+
+\subsubsection{Vectors in $\mathbb{R}^3$}
+
+If $P$ is the point of intersection of the line $x=a$, and the line $y=b$, then the \textit{ordered pair} $(a,b)$ is said to be the \textit{rectangular} or \textit{Cartesian coordinates} of the point.
+
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure14.PNG}
+  \centering
+\end{figure}
+
+
+\textbf{Rectangular Coordinate System in 3-Space}\vspace{0.5cm}
+
+\begin{figure}[H]
+  \includegraphics[width=8cm]{images/figure15.PNG}
+  \centering
+\end{figure}
+
+The dashed lines figure $(a)$  represent the negative axes. Now if:
+
+\[x = a, \quad y = b, \quad z = c\]
+
+are planes perpendicular to the x-axis, y-axis, and z-axis, then the point $P$ at which these points intersect can be represented as an \textit{ordered triple} of numbers $(a,b,c)$ said to be the \textbf{rectangular} or \textbf{Cartesian coordinates} of the point.\\
+
+The numbers $a$, $b$, and $c$ are called the $x$-, $y$-, and $z$-\textbf{coordinates} of $P(a,b,c)$.\\
+
+Each pair of coordinate axes determines a \textbf{Coordinate pair}.
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure16.PNG}
+  \centering
+\end{figure}
+
+The coordinate planes divide 3-space into eight parts known as \textit{octants}. the octant in which all three coordinates of a point are positive is called the \textit{first octant}.
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+Axes & Coordinates & Plane & Coordinates \\
+\hline
+\multirow{4}{4em}{$x$\\ $y$\\ $z$\\} & $(a,0,0)$ & $xy$ & $(a,b,0)$\\ 
+& $(0,b,0)$ & $xz$ & $(a,0,c)$ \\ 
+& $(0,0,c)$ & $yz$ & $(0,b,c)$\\ 
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{EXAMPLE 1: Graphs of Three Points}\vspace{0.5cm}
+
+Graph the points $(4, 5, 6)$, $(3, -3, -1)$, and $(-2, -2, 0)$.
+
+\begin{figure}[H]
+  \includegraphics[width=8cm]{images/figure17.PNG}
+  \centering
+\end{figure}
+
+\textbf{Distance Formula}\vspace{0.5cm}
+
+To find the \textit{distance} between two points $P_1(x_1,y_1,z_1)$ and $P_2(x_2,y_2,z_2)$ in 3-space, consider their projection onto the $xy$-plane.\vspace{0.5cm}
+The distance between $(x_1,y_1,0)$ and $(x_2,y_2,0)$ is given by 
+\[\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\]
+
+If the coordinates for $P_3$ are $(x_2, y_2, z_1)$, then the Pythagorean theorem applied to $P_1P_2P_3$ yields
+
+\[[d(P_1,P_2)^2] = [\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}]^2 + \abs{z_2 - z_1}^2\]
+
+or
+
+\[d(P_1,P_2) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}\]\vspace{1cm}
+
+\textbf{EXAMPLE 2: Distance Between Two Points}\vspace{0.5cm}
+
+Find the distance between $(2, -3, 6)$ and $(-1,-7,4)$\vspace{0.5cm}
+
+\textbf{SOLUTION}\\
+$P_2$ as $(2,-3,6)$ and $P_1$ as $(-1,-7,4)$
+
+\[d = \sqrt{(2-(-1))^2 + (-3-(-7))^2 + (6-4)^2} = \sqrt{29}\]
+
+\textbf{Midpoint Formula}\vspace{0.5cm}
+
+\[(\frac{x_1 + x_2}{2},\frac{y_1 + y_2}{2},\frac{z_1 + z_2}{2})\]
+
+\textbf{EXAMPLE 3: Coordinates of a Midpoint}\vspace{0.5cm}
+
+Using the coordinates from example 3:
+
+\[(\frac{2 + (-1)}{2} , \frac{-3+(-7)}{2}, \frac{6 + 4}{2}) \text{or} (\frac{1}{2}, -5, 5)\]
+
+\textbf{Vectors in 3-Space}
+
+A \textbf{vector a in 3-space} is any order triple of real numbers
+
+\[a = \qdist{a_1, a_2, a_3}\]
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure18.PNG}
+  \centering
+\end{figure}
+
+\textbf{Component Definitions in 3-space}\vspace{0.5cm}
+
+Let \textbf{a} $= \qdist{a_1,a_2,a_3}$ and \textbf{b} $= \qdist{b_1,b_2,b_3}$ be vectors in $\mathbb{R}^3$.
+
+\begin{enumerate}[label = (\roman*)]
+  \item \textit{Addition:} $ \mathbf{a} + \mathbf{b} = \qdist{a_1 + b_1, a_2 + b_2, a_3 + b_3}$
+  \item \textit{Scalar multiplication:} $k \mathbf{a} = \qdist{ka_1, ka_2, ka_3}$
+  \item \textit{Equality:} $ \mathbf{a} = \mathbf{b}$ if and only if $a_1 = b_1, a_2 = b_2, a_3 = b_3$
+  \item \textit{Negative:} $-b = (-1)\mathbf{b} = \qdist{-b_1,-b_2,-b_3}$
+  \item \textit{Subtraction:} $\textbf{a} - \textbf{b} = \textbf{a} + (-\textbf{b}) = \qdist{a_1 - b_1, a_2 - b_2, a_3 - b_3}$
+  \item \textit{Zero vector:} $\textbf{0} = \qdist{0,0,0}$
+  \item \textit{Magnitude:} $\norm{\textbf{a}} = \sqrt{a_1^2 + a_2^2 + a_3^3}$ 
+\end{enumerate}
+
+If $\overrightarrow{OP_1}$ and $\overrightarrow{OP_2}$ are the position points $P_1(x_1,y_1,z_1)$ and $P_2(x_2,y_2,z_2)$ then the vector $\overrightarrow{P_1P_2}$ is given by
+
+
+\[\overrightarrow{P_1P_2} = \overrightarrow{OP_2} - \overrightarrow{OP_1} = \qdist{x_2 - x_1, y_2 - y_1, z_2 - z_1}\]
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure19.PNG}
+  \centering
+\end{figure}
+
+\textbf{EXAMPLE 4: Vector Between Two Points}\vspace{0.5cm}
+
+Find the vector $\overrightarrow{P_1P_2}$ if the points $P_1$ and $P_2$ are given by $P1 (4, 6, -2)$ and $P2 (1, 8, 3)$,
+respectively.\vspace{0.5cm}
 
 
 
+\[\overrightarrow{P_1P_2} = \overrightarrow{OP_2} - \overrightarrow{OP_1} = \qdist{1 - 4,8 - 6,3-(-2)} = \qdist{-3,2,5}\]
+
+\textbf{EXAMPLE 5: A Unit Vector}\vspace{0.5cm}
+
+Find a unit vector in the direction of $\textbf{a} = \qdist{-2,3,5}$
+
+\textbf{SOLUTION}\vspace{0.5cm}
+
+Magnitude:\\
+
+\[\norm{\mathbf{a}} = \sqrt{(-2)^2 + 3^2 + 6^2} = \sqrt{49} = 7\]
+
+Direction of $\mathbf{a}$:\\
+
+\[\frac{\mathbf{a}}{\norm{\mathbf{a}}} = \frac{1}{7} \qdist{-2,3,6} = \qdist{- \frac{2}{7}, \frac{3}{7}, \frac{6}{7}}\]
+
+
+\textbf{The i, j, k Vectors}
+
+\[i = \qdist{1,0,0}, \quad j = \qdist{0,1,0}, \quad k = \qdist{0,0,1}\]
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure20.PNG}
+  \centering
+\end{figure}
+
+\[\qdist{1_1,a_2,a_3} = \qdist{a_1,0,0} + \qdist{0,a_2,0} + \qdist{0,0,a_3}\]
+\[ \qquad \qquad \qquad = a_1 \qdist{1,0,0} + a_2 \qdist{0,1,0} + a_3 \qdist{0,0,1}\]
+\[ \mathbf{a} = a_1 \mathbf{i} + a_2 \mathbf{j} + a_3 \mathbf{k}\]
+
+\begin{figure}[H]
+  \includegraphics[width=5cm]{images/figure21.PNG}
+  \centering
+\end{figure}
 
 
 \end{document}
+

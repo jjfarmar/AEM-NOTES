@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.1)  4 MAR 2025 21:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.1)  9 MAR 2025 19:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -400,16 +400,34 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count321
  (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
+))) (c:/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (c:/texlive/2024/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks38
+) (c:/texlive/2024/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count322
+\float@exts=\toks39
+\float@box=\box68
+\@float@everytoks=\toks40
+\@floatcapt=\box69
+) (c:/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count323
+\multirow@dima=\skip59
+\bigstrutjot=\dimen275
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ) (c:/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/01/19 v3.10 Customized lists
-\labelindent=\skip58
-\enit@outerparindent=\dimen275
-\enit@toks=\toks38
-\enit@inbox=\box68
-\enit@count@id=\count322
-\enitdp@description=\count323
+\labelindent=\skip60
+\enit@outerparindent=\dimen276
+\enit@toks=\toks41
+\enit@inbox=\box70
+\enit@count@id=\count324
+\enitdp@description=\count325
 ) (c:/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (c:/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
@@ -417,48 +435,48 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (c:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count324
-\Gm@cntv=\count325
-\c@Gm@tempcnt=\count326
-\Gm@bindingoffset=\dimen276
-\Gm@wd@mp=\dimen277
-\Gm@odd@mp=\dimen278
-\Gm@even@mp=\dimen279
-\Gm@layoutwidth=\dimen280
-\Gm@layoutheight=\dimen281
-\Gm@layouthoffset=\dimen282
-\Gm@layoutvoffset=\dimen283
-\Gm@dimlist=\toks39
+\Gm@cnth=\count326
+\Gm@cntv=\count327
+\c@Gm@tempcnt=\count328
+\Gm@bindingoffset=\dimen277
+\Gm@wd@mp=\dimen278
+\Gm@odd@mp=\dimen279
+\Gm@even@mp=\dimen280
+\Gm@layoutwidth=\dimen281
+\Gm@layoutheight=\dimen282
+\Gm@layouthoffset=\dimen283
+\Gm@layoutvoffset=\dimen284
+\Gm@dimlist=\toks42
 ) (./AEM_NOTES.aux)
 \openout1 = `AEM_NOTES.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count327
-\scratchdimen=\dimen284
-\scratchbox=\box69
-\nofMPsegments=\count328
-\nofMParguments=\count329
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count330
-\MPscratchDim=\dimen285
-\MPnumerator=\count331
-\makeMPintoPDFobject=\count332
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count329
+\scratchdimen=\dimen285
+\scratchbox=\box71
+\nofMPsegments=\count330
+\nofMParguments=\count331
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen286
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
+\everyMPtoPDFconversion=\toks44
 ) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -499,11 +517,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 100.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 100.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -525,26 +543,160 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [7]
 
 [8]
+<images/figure1.PNG, id=48, 178.41656pt x 151.3153pt>
+File: images/figure1.PNG Graphic file (type png)
+<use images/figure1.PNG>
+Package pdftex.def Info: images/figure1.PNG  used on input line 537.
+(pdftex.def)             Requested size: 142.26378pt x 120.65988pt.
+<images/figure2.PNG, id=50, 219.82124pt x 170.88844pt>
+File: images/figure2.PNG Graphic file (type png)
+<use images/figure2.PNG>
+Package pdftex.def Info: images/figure2.PNG  used on input line 546.
+(pdftex.def)             Requested size: 142.26378pt x 110.59898pt.
+<images/figure3.PNG, id=51, 238.64156pt x 122.70844pt>
+File: images/figure3.PNG Graphic file (type png)
+<use images/figure3.PNG>
+Package pdftex.def Info: images/figure3.PNG  used on input line 555.
+(pdftex.def)             Requested size: 142.26378pt x 73.15004pt.
 
-[9] (./AEM_NOTES.aux)
+
+[9 <./images/figure1.PNG> <./images/figure2.PNG> <./images/figure3.PNG>]
+<images/figure4.PNG, id=58, 182.93344pt x 124.96687pt>
+File: images/figure4.PNG Graphic file (type png)
+<use images/figure4.PNG>
+Package pdftex.def Info: images/figure4.PNG  used on input line 564.
+(pdftex.def)             Requested size: 142.26378pt x 97.18965pt.
+<images/figure5.PNG, id=59, 161.85469pt x 124.96687pt>
+File: images/figure5.PNG Graphic file (type png)
+<use images/figure5.PNG>
+Package pdftex.def Info: images/figure5.PNG  used on input line 577.
+(pdftex.def)             Requested size: 142.26378pt x 109.84724pt.
+<images/figure6.PNG, id=60, 193.47281pt x 137.7647pt>
+File: images/figure6.PNG Graphic file (type png)
+<use images/figure6.PNG>
+Package pdftex.def Info: images/figure6.PNG  used on input line 587.
+(pdftex.def)             Requested size: 142.26378pt x 101.30101pt.
+<images/figure7.PNG, id=61, 162.6075pt x 133.24782pt>
+File: images/figure7.PNG Graphic file (type png)
+<use images/figure7.PNG>
+Package pdftex.def Info: images/figure7.PNG  used on input line 594.
+(pdftex.def)             Requested size: 142.26378pt x 116.58543pt.
+
+
+[10 <./images/figure4.PNG> <./images/figure5.PNG> <./images/figure6.PNG>]
+<images/figure8.PNG, id=68, 246.1697pt x 178.41656pt>
+File: images/figure8.PNG Graphic file (type png)
+<use images/figure8.PNG>
+Package pdftex.def Info: images/figure8.PNG  used on input line 626.
+(pdftex.def)             Requested size: 170.71652pt x 123.73642pt.
+<images/figure9.PNG, id=69, 244.66406pt x 170.88844pt>
+File: images/figure9.PNG Graphic file (type png)
+<use images/figure9.PNG>
+Package pdftex.def Info: images/figure9.PNG  used on input line 635.
+(pdftex.def)             Requested size: 227.62204pt x 158.98978pt.
+
+
+[11 <./images/figure7.PNG> <./images/figure8.PNG>]
+
+[12{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/figure9.PNG>]
+<images/figure10.PNG, id=80, 140.02313pt x 124.21407pt>
+File: images/figure10.PNG Graphic file (type png)
+<use images/figure10.PNG>
+Package pdftex.def Info: images/figure10.PNG  used on input line 724.
+(pdftex.def)             Requested size: 142.26378pt x 126.20764pt.
+<images/figure11.PNG, id=81, 182.93344pt x 135.50626pt>
+File: images/figure11.PNG Graphic file (type png)
+<use images/figure11.PNG>
+Package pdftex.def Info: images/figure11.PNG  used on input line 731.
+(pdftex.def)             Requested size: 142.26378pt x 105.38635pt.
+
+
+[13 <./images/figure10.PNG>]
+<images/figure12.PNG, id=87, 182.18062pt x 225.09094pt>
+File: images/figure12.PNG Graphic file (type png)
+<use images/figure12.PNG>
+Package pdftex.def Info: images/figure12.PNG  used on input line 756.
+(pdftex.def)             Requested size: 142.26378pt x 175.77972pt.
+
+
+[14 <./images/figure11.PNG> <./images/figure12.PNG>]
+<images/figure13.PNG, id=93, 177.66376pt x 223.58531pt>
+File: images/figure13.PNG Graphic file (type png)
+<use images/figure13.PNG>
+Package pdftex.def Info: images/figure13.PNG  used on input line 765.
+(pdftex.def)             Requested size: 142.26378pt x 179.03905pt.
+<images/figure14.PNG, id=94, 205.5178pt x 186.6975pt>
+File: images/figure14.PNG Graphic file (type png)
+<use images/figure14.PNG>
+Package pdftex.def Info: images/figure14.PNG  used on input line 775.
+(pdftex.def)             Requested size: 142.26378pt x 129.23448pt.
+<images/figure15.PNG, id=95, 484.81125pt x 204.765pt>
+File: images/figure15.PNG Graphic file (type png)
+<use images/figure15.PNG>
+Package pdftex.def Info: images/figure15.PNG  used on input line 783.
+(pdftex.def)             Requested size: 227.62204pt x 96.13957pt.
+<images/figure16.PNG, id=96, 229.60782pt x 207.77625pt>
+File: images/figure16.PNG Graphic file (type png)
+<use images/figure16.PNG>
+Package pdftex.def Info: images/figure16.PNG  used on input line 798.
+(pdftex.def)             Requested size: 142.26378pt x 128.74384pt.
+
+
+[15 <./images/figure13.PNG> <./images/figure14.PNG> <./images/figure15.PNG>]
+<images/figure17.PNG, id=103, 240.9pt x 219.06844pt>
+File: images/figure17.PNG Graphic file (type png)
+<use images/figure17.PNG>
+Package pdftex.def Info: images/figure17.PNG  used on input line 822.
+(pdftex.def)             Requested size: 227.62204pt x 207.00069pt.
+
+
+[16 <./images/figure16.PNG> <./images/figure17.PNG>]
+<images/figure18.PNG, id=109, 192.72pt x 167.87718pt>
+File: images/figure18.PNG Graphic file (type png)
+<use images/figure18.PNG>
+Package pdftex.def Info: images/figure18.PNG  used on input line 866.
+(pdftex.def)             Requested size: 142.26378pt x 123.9249pt.
+<images/figure19.PNG, id=110, 208.52907pt x 156.585pt>
+File: images/figure19.PNG Graphic file (type png)
+<use images/figure19.PNG>
+Package pdftex.def Info: images/figure19.PNG  used on input line 890.
+(pdftex.def)             Requested size: 142.26378pt x 106.83238pt.
+
+
+[17 <./images/figure18.PNG>]
+<images/figure20.PNG, id=115, 171.64125pt x 139.27031pt>
+File: images/figure20.PNG Graphic file (type png)
+<use images/figure20.PNG>
+Package pdftex.def Info: images/figure20.PNG  used on input line 923.
+(pdftex.def)             Requested size: 142.26378pt x 115.4328pt.
+<images/figure21.PNG, id=116, 204.765pt x 169.38281pt>
+File: images/figure21.PNG Graphic file (type png)
+<use images/figure21.PNG>
+Package pdftex.def Info: images/figure21.PNG  used on input line 932.
+(pdftex.def)             Requested size: 142.26378pt x 117.68839pt.
+
+
+[18 <./images/figure19.PNG> <./images/figure20.PNG>]
+
+[19 <./images/figure21.PNG>] (./AEM_NOTES.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17141 strings out of 473200
- 334931 string characters out of 5720279
- 826242 words of memory out of 5000000
- 40096 multiletter control sequences out of 15000+600000
- 567665 words of font info for 70 fonts, out of 8000000 for 9000
+ 17499 strings out of 473200
+ 342354 string characters out of 5720279
+ 828893 words of memory out of 5000000
+ 40439 multiletter control sequences out of 15000+600000
+ 568000 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,16n,107p,468b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on AEM_NOTES.pdf (9 pages, 214444 bytes).
+ 102i,16n,107p,458b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AEM_NOTES.pdf (19 pages, 401912 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 204 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
